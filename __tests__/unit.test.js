@@ -30,7 +30,7 @@ test("isEmail - false cases", () => {
 
 test("isStrongPassword - true cases", () => {
   expect(isStrongPassword('StrongPass1')).toBe(true);
-  expect(isStrongPassword('LongEnough@5678')).toBe(true);
+  expect(isStrongPassword('My_P4ssword')).toBe(true);
 });
 
 test("isStrongPassword - false cases", () => {
