@@ -5,11 +5,11 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   const hornSelect = document.getElementById('horn-select');
   const volumeImage = document.querySelector("#volume-controls img");
-  const hornImage = document.querySelector("img");
+  const hornImage = document.querySelector("section#expose > img");
   const button = document.querySelector("button");
   const volumeSlider = document.getElementById('volume');
   const audio = document.querySelector("audio");
-  const jsConfetti = new jsConfetti();
+  const jsConfetti = new jSConfetti();
 
   hornSelect.addEventListener('change', () => {
     const hornInfo = hornSelect.value;
@@ -41,6 +41,4 @@ button.addEventListener('click', () => {
     jsConfetti.addConfetti();
   }
 });
-
-  
 }
