@@ -16,6 +16,6 @@ function init() {
 
     hornImage.src = `assets/images/${horn}.svg`;
 
-    audio.src = `assets/audio/${horn}`;
+    audio.src = `assets/audio/${horn}.mp3`;
   });
 }
