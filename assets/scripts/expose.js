@@ -4,22 +4,15 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   const hornSelect = document.getElementById('horn-select');
-  
   const image = document.getElementById("sound-image");
-
   const audio = document.getElementById("horn-sound");
-
   const volumeImage = document.getElementById("volume-image");
-
-  
   const volumeSlider = document.getElementById('volume');
-  
   const button = document.querySelector("button");
-  
   const jsConfetti = new jsConfetti();
 
   hornSelect.addEventListener('change', () => {
-    const horn = hornSelect.value
+    const horn = hornSelect.value;
     
     if (horn === "air-horn") {
       image.src = "assets/images/air-horn.svg";
