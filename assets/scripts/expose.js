@@ -17,7 +17,7 @@ function init() {
     hornImage.src = `assets/images${horn}.svg`;
     hornImage.alt = horn;
 
-    audio.src = `assets/audio/${horn}`
+    audio.src = `assets/audio/${horn}`;
   });
 
   volumeSlider.addEventListener('input', () => {
