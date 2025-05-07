@@ -14,8 +14,7 @@ function init() {
   hornSelect.addEventListener('change', () => {
     const horn = hornSelect.value;
 
-    hornImage.src = `assets/images${horn}.svg`;
-    hornImage.alt = horn;
+    hornImage.src = `assets/images/${horn}.svg`;
 
     audio.src = `assets/audio/${horn}`;
   });
