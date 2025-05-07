@@ -29,7 +29,7 @@ test("isEmail - false cases", () => {
 });
 
 test("isStrongPassword - true cases", () => {
-  expect(isStrongPassword('VeryLongPW!145023')).toBe(true);
+  expect(isStrongPassword('LongEnough@5632')).toBe(true);
   expect(isStrongPassword('LongEnough@5678')).toBe(true);
 });
 
