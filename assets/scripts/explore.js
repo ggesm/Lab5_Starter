@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   const synth = window.speechSynthesis;
 
-  const textArea = document.getElementById("text-to-speech");
+  const textArea = document.getElementById("text-to-speeak");
   const voiceSelect = document.getElementById("voice-select");
   const button = document.querySelector("button");
   const faceImage = document.querySelector("img");
@@ -19,6 +19,12 @@ function init() {
       voiceSelect.removeChild(voiceSelect.firstChild);
     }
 
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "select";
+    defaultOption.disabled = true;
+    defaultOption.selected = true;
+    defaultOption.textContext = 'Select Voice';
+    voiceSelect.appendChild(defaultOption);
 
     voices.forEach(voice => {
       const option = document.createElement("option");
@@ -32,7 +38,7 @@ function init() {
   populateVoiceList();
 
   if(typeof synth.onvoiceschanged !== "undefined") {
-    synth.onvoicechanged = populateVoiceList;
+    synth.onvoiceschanged = populateVoiceList;
   }
 
   button.addEventListener("click", () => {
@@ -49,7 +55,7 @@ function init() {
     };
 
     textSpeak.onend = () => {
-      faceImage.src = "assets/image/smiling.png";
+      faceImage.src = "assets/images/smiling.png";
     };
 
     synth.speak(textSpeak);
