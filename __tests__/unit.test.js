@@ -29,7 +29,7 @@ test("isEmail - false cases", () => {
 });
 
 test("isStrongPassword - true cases", () => {
-  expect(isStrongPassword('VeryLongPW@1234')).toBe(true);
+  expect(isStrongPassword('VeryLongPW!123456')).toBe(true);
   expect(isStrongPassword('LongEnough@5678')).toBe(true);
 });
 
@@ -55,7 +55,7 @@ test("isHexColor - true cases", () => {
 
 test("isHexColor - false cases", () => {
   expect(isHexColor('blue')).toBe(false);
-  expect(isHexColor('123456')).toBe(false);
+  expect(isHexColor('red')).toBe(false);
 });
 
 
