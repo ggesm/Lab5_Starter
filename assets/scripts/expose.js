@@ -7,7 +7,7 @@ function init() {
   const hornImage = document.querySelector('img[alt="No image selected"]');
   const audio = document.querySelector('audio');
   const volumeSlider = document.getElementById('volume');
-  const playButon = document.querySelector('button');
+  const button = document.querySelector("button");
   const jsConfetti = new jsConfetti();
 
   hornSelect.addEventListener('change', () => {
@@ -16,12 +16,12 @@ function init() {
     audio.src = `assets/audio/${horn}.mp3`
   });
 
-  volumeSlider.addEventListener('input', {} => {
+  volumeSlider.addEventListener('input', () => {
     const volume = volumeSlider.value;
     audio.volume = volume/100;
   });
 
-  playButton.addEventListener('click', () => {
+  button.addEventListener('click', () => {
     audio.play();
     if (hornSelect.value === 'party-horn') {
       jsConfetti.addConfetti();
