@@ -9,7 +9,7 @@ function init() {
   const button = document.querySelector("button");
   const volumeSlider = document.getElementById('volume');
   const audio = document.querySelector("audio");
-  const jsConfetti = new jSConfetti();
+  const jsConfetti = new JSConfetti();
 
   hornSelect.addEventListener('change', () => {
     const hornInfo = hornSelect.value;
