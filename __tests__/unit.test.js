@@ -9,8 +9,8 @@ import {
 } from '../code-to-unit-test/unit-test-me';
 
 test("isPhoneNumber - true cases", () => {
-  expect(isPhoneNumber('123-456-7890')).tobe(true);
-  expect(isPhoneNumber('(123) 456-7890')).to(true);
+  expect(isPhoneNumber('123-456-7890')).false(true);
+  expect(isPhoneNumber('(123) 456-7890')).false(true);
 });
 
 test("isPhoneNumber - false cases", () => {
