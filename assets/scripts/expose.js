@@ -4,26 +4,20 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   const hornSelect = document.getElementById('horn-select');
-  const image = document.getElementById("sound-image");
-  const audio = document.getElementById("horn-sound");
-  const volumeImage = document.getElementById("volume-image");
-  const volumeSlider = document.getElementById('volume');
+  const volumeImage = document.querySelector("#volume-controls img");
+  const hornImage = document.querySelector("#expose img");
   const button = document.querySelector("button");
+  const volumeSlider = document.getElementId('volume');
+  const audio = document.querySelector("audio");
   const jsConfetti = new jsConfetti();
 
   hornSelect.addEventListener('change', () => {
     const horn = hornSelect.value;
-    
-    if (horn === "air-horn") {
-      image.src = "assets/images/air-horn.svg";
-      audio.src = "assets/audio/air-horn.mp3";
-    } else if (horn === "car-horn") {
-      image.src = "assets/images/car-horn.svg";
-      audio.src = "assets/audio/car-horn.mp3";
-    } else if (horn === "party-horn") {
-      image.src = "assets/images/party-horn.svg";
-      audio.src = "assets/audio/party-horn.mp3";
-    }
+
+    hornImage.src = `assets/images${horn}.svg`;
+    hornImage.alt = horn;
+
+    audio.src = `assets/audio/${horn}`
   });
 
   volumeSlider.addEventListener('input', () => {
