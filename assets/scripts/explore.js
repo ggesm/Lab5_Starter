@@ -23,7 +23,7 @@ function init() {
     defaultOption.value = "select";
     defaultOption.disabled = true;
     defaultOption.selected = true;
-    defaultOption.textContext = 'Select Voice';
+    defaultOption.textContent = 'Select Voice';
     voiceSelect.appendChild(defaultOption);
 
     voices.forEach(voice => {
